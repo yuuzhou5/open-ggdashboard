@@ -1,9 +1,30 @@
 {
+  "name": "open-ggdashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "db:generate": "dotenv -e .env.local -- drizzle-kit generate",
+    "db:migrate": "dotenv -e .env.local -- drizzle-kit migrate",
+    "db:studio": "dotenv -e .env.local -- drizzle-kit studio"
+  },
   "dependencies": {
+    "@better-auth/api-key": "^1.6.10",
+    "@t3-oss/env-nextjs": "^0.13.11",
+    "better-auth": "^1.6.10",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv-cli": "^11.0.0",
+    "drizzle-orm": "^0.45.2",
     "lucide-react": "^1.14.0",
     "next": "16.2.6",
+    "pg": "^8.20.0",
     "radix-ui": "^1.4.3",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -14,8 +35,10 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.20.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "oxfmt": "^0.48.0",
@@ -24,17 +47,6 @@
     "typescript": "^5",
     "ultracite": "7.6.5"
   },
-  "name": "open-ggdashboard",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint",
-    "check": "ultracite check",
-    "fix": "ultracite fix"
-  },
-  "version": "0.1.0",
-  "private": true,
   "ignoreScripts": [
     "sharp",
     "unrs-resolver"
@@ -42,6 +54,5 @@
   "trustedDependencies": [
     "sharp",
     "unrs-resolver"
-  ],
-  "type": "module"
+  ]
 }
