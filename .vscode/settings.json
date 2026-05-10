@@ -1,5 +1,5 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "emmet.showExpandedAbbreviation": "never",
@@ -55,5 +55,19 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.oxc": "explicit"
+  },
+
+  "biome.enabled": false,
+
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "oxc": "oxfmt.config.ts, oxlint.config.ts"
   }
 }
